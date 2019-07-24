@@ -25,18 +25,19 @@ RAM with their index number
 
 Monitored items and triggers:
 
-Individual physical disks and their status Trigger: physical disk not online or predictive failure is true
-Individual virtual disk RAID type/size and status Trigger: virtual disk status is not ok
-Individual battary and their status and state Trigger: battary status not ok
-Individual fans and their status and RPM Trigger: fan status not ok
-Individual PSU's and their status Trigger: PSU status not ok
-Individual temperature sensors and their value
-Individual RAM modules and their status Trigger: RAM status not ok
-Server model
-Server service tag
-Server BIOS version
-Server iDRAC version
-Server general health status Trigger: if any of the status indicators is not ok
+* Individual physical disks and their status Trigger: physical disk not online or predictive failure is true
+* Individual virtual disk RAID type/size and status Trigger: virtual disk status is not ok
+* Individual battary and their status and state Trigger: battary status not ok
+* Individual fans and their status and RPM Trigger: fan status not ok
+* Individual PSU's and their status Trigger: PSU status not ok
+* Individual temperature sensors and their value
+* Individual RAM modules and their status Trigger: RAM status not ok
+* Server model
+* Server service tag
+* Server BIOS version
+* Server iDRAC version
+* Server general health status Trigger: if any of the status indicators is not ok
+
 
 
 Install OMSA
@@ -57,10 +58,11 @@ add line:
 zabbix ALL=(ALL)  NOPASSWD: /etc/zabbix/dell-omsa/omsa.sh
 
 Add template
-1.cp userparameter_omsa.conf /etc/zabbix/zabbix_agentd.d/
-2.cp -r omsa.sh /etc/zabbix/dell-omsa/
-3.chmod +x /etc/zabbix/dell-omsa/*.sh
-4.systemctl restart zabbix-agent (OR reboot)
-5.zabbix:Configuration--Templates--Import,dell-omsa-3_4.xml 
+1. cp userparameter_omsa.conf /etc/zabbix/zabbix_agentd.d/
+1. cp -r omsa.sh /etc/zabbix/dell-omsa/
+1. chmod +x /etc/zabbix/dell-omsa/*.sh
+1. systemctl restart zabbix-agent (OR reboot)
+1. zabbix:Configuration--Templates--Import,dell-omsa-3_4.xml 
+
 
 Have fun!thinks for gitlab people!
